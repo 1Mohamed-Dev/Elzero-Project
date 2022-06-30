@@ -1,0 +1,143 @@
+/*Start Global Rules*/
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Cairo', sans-serif;
+}
+
+:root{
+    --main-color: #2196f3;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.con{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .con{
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .con{
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .con{
+        width: 1170px;
+    }
+}
+/* End Global Rules */
+
+/*Start Header*/
+
+header{
+    background-color: white;
+    box-shadow: 0 0 5px #666;
+    position: relative;
+}
+
+header .con{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+}
+
+header .logo{
+    color: var(--main-color);
+    font-size: 25px;
+    font-weight: 700;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+header .con > ul > li > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+    font-size: 19px;
+    font-weight: 400;
+    height: 70px;
+    color: black;
+    transition: 0.5s;
+    overflow: hidden;
+    position: relative;
+}
+
+@media (max-width: 767px) {
+    header .con{
+        flex-direction: column;
+    }
+
+    header .logo{
+        margin: 0 auto;
+        height: 50px;
+    }
+
+    header .con > ul{
+        margin: 0 auto;
+    }
+
+    header .con > ul > li > a{
+        font-size: 15px;
+        padding: 10px;
+        height: 50px;
+    }
+}
+
+header .con > ul > li > a::before{
+    content: "";
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    background-color: var(--main-color);
+    top: 0;
+    left: -100%;
+    transition: 0.5s;
+}
+
+header .con > ul > li > a:hover::before{
+    left: 0;
+}
+
+header .con > ul > li > a:hover{
+    background-color: #fafafa;
+    color: var(--main-color);
+}
+
+/* End Header */
