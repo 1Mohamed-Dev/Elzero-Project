@@ -52,13 +52,14 @@ a{
         width: 1170px;
     }
 }
+
 /* End Global Rules */
 
 /*Start Header*/
 
 header{
     background-color: white;
-    box-shadow: 0 0 5px #666;
+    box-shadow: 0 0 5px #66666603;
     position: relative;
 }
 
@@ -143,8 +144,8 @@ header .con > ul > li > a:hover{
 
 header .con > ul > li:last-child > a:hover + .big-menu{
     opacity: 1;
-    z-index: 100;
     top: calc(100% + 1px);
+    pointer-events: all;
 }
 
 /*Start Big Menu*/
@@ -159,9 +160,10 @@ header .big-menu{
     background-color: white;
     display: flex;
     column-gap: 40px;
-    z-index: -5;
+    z-index: 5;
     opacity: 0;
     transition: top 0.6s, opacity 0.6s;
+    pointer-events: none;
 }
 
 @media (max-width: 767px){
@@ -212,3 +214,107 @@ header .big-menu .col li a i{
 /* End Big Menu */
 
 /* End Header */
+
+/*Start Landing*/
+
+.landing{
+    position: relative;
+}
+
+.landing::before{
+    content: "";
+    background-color: #ececec;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -92px;
+    left: 0;
+    z-index: -1;
+    transform: skewY(-5deg);
+}
+
+.landing .con{
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    padding-bottom: 120px;
+}
+
+.landing .img img{
+    width: 600px;
+    position: relative;
+    animation-name: up-down;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes up-down {
+    0%, 100% {
+        top: 0;
+    }
+
+    50% {
+        top: -50px;
+    }
+}
+
+@media (max-width: 991px) {
+    .landing .img{
+        display: none;
+    }
+}
+
+.landing .txt{
+    flex: 1;
+}
+
+.landing .txt h1{
+    margin: 0;
+    font-size: 40px;
+    letter-spacing: -1.5px;
+}
+
+.landing .txt p{
+    color: #666;
+    font-size: 23px;
+    line-height: 1.7;
+    max-width: 500px;
+}
+
+@media (max-width: 991px) {
+    .landing .txt{
+        text-align: center;
+    }
+
+    .landing .txt p{
+        margin: 10px auto;
+    }
+}
+
+.landing a{
+    color: var(--main-color);
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.6s;
+}
+
+.landing a i{
+    animation-name: go-down;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes go-down{
+    0%, 10%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    
+    40%, 60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* End Landing */
