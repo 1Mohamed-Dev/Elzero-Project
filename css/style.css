@@ -67,6 +67,7 @@ a{
     position: relative;
     cursor: default;
     transition: 0.6s;
+    z-index: 5;
 }
 
 .main-heading::before,
@@ -717,3 +718,60 @@ header .big-menu .col li a i{
 /* End Passion */
 
 /* End Features */
+
+/*Start Testmonials*/
+
+.testmonilas{
+    padding: 100px 0;
+    position: relative;
+    background-color: #ececec;
+}
+
+.testmonilas .con{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.testmonilas .box{
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.253);
+    max-width: 100%;
+}
+
+.testmonilas img{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    right: -10px;
+    border-radius: 50%;
+    border: 10px solid #ececec;
+}
+
+.testmonilas .box h3{
+    margin: 0 0 10px;
+}
+
+.testmonilas .box > .job{
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.testmonilas  .fa-star,
+.testmonilas .fa-star-half-stroke{
+    color: #ffc107;
+}
+
+
+
+.testmonilas .box .comment{
+    color: #777;
+    line-height: 1.5;
+    margin: 10px 0 0;
+}
+
+/* End Testmonials */
