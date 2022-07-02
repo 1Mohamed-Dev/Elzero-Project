@@ -108,7 +108,7 @@ a{
     }
     100% {
       left: 0;
-      width: 50%;
+      width: calc(50% + 1px);
       height: 100%;
       border-radius: 0;
     }
@@ -124,7 +124,7 @@ a{
     }
     100% {
       right: 0;
-      width: 50%;
+      width: calc(50% + 1px);
       height: 100%;
       border-radius: 0;
     }
@@ -775,3 +775,125 @@ header .big-menu .col li a i{
 }
 
 /* End Testmonials */
+
+/*Start Team*/
+
+.team{
+    padding: 100px 0;
+}
+
+.team .con{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.team .box{
+    position: relative;
+    overflow: hidden;
+}
+
+.team .box::before,
+.team .box::after{
+    content: "";
+    background-color: #f3f3f3;
+    position: absolute;
+    z-index: -2;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: calc(100% - 60px);
+    border-radius: 15px;
+    transition: 0.6s;
+}
+
+.team .box::after{
+    z-index: -1;
+    background-color: #e4e4e4;
+    height: 100%;
+    right: -100%;
+    transition: 0.6s;
+}
+
+.team .box:hover::after{
+    right: 0;
+}
+
+.team .box:hover img{
+    filter: grayscale(1);
+}
+
+.team .box:hover .info h3{
+    color: #777;
+}
+
+.team .box .cont{
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.team .box .cont img{
+    width: calc(100% - 60px);
+    transition: 0.6s;
+}
+
+.team .box .cont .social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 60px;
+}
+
+.team .box .cont .social a{
+    color: #777;
+    font-size: 20px;
+    width: 60px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team .box .info {
+    padding-left: 80px;
+}
+
+.team .box .info h3{
+    margin-top: 15px;
+    margin-bottom: 0;
+    color: var(--main-color);
+    font-size: 25px;
+    transition: 0.6s;
+}
+
+.team .box .info p{
+    color: #777;
+    margin: 10px 0 15px;
+}
+
+.fa-facebook-f,
+.fa-instagram,
+.fa-twitter,
+.fa-tiktok{
+    transition: 0.6s;
+}
+
+.fa-facebook-f:hover{
+    color: blue;
+}
+
+.fa-instagram:hover{
+    color: rgb(214, 25, 104);
+}
+
+.fa-twitter:hover{
+    color: cyan;
+}
+
+.fa-tiktok:hover{
+    color: black;
+}
+
+/* End Team */
