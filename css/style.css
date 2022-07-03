@@ -142,8 +142,10 @@ a{
 
 header{
     background-color: white;
-    box-shadow: 0 0 5px #66666603;
-    position: relative;
+    box-shadow: 0 0 5px #66666667;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 header .con{
@@ -994,3 +996,56 @@ header .big-menu .col li a i{
 }
 
 /* End Services */
+
+/*Start Skills*/
+
+.skills{
+    padding: 100px 0;
+    position: relative;
+}
+
+.skills .con{
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 991px) {
+    .skills .con img{
+        display: none;
+    }
+}
+
+.skills .prog{
+    flex: 1;
+}
+
+.skills .prog .skill h3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 18px 0;
+}
+
+.skills .prog .skill h3 span{
+    color: var(--main-color);
+    padding: 3px 5px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    border-radius: 4px;
+}
+.skills .prog .skill .stats{
+    height: 30px;
+    background-color: #eee;
+    position: relative;
+}
+
+.skills .prog .skill .stats span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--main-color);
+    transition: width 0.5s linear;
+}
+
+/* End Skills*/
