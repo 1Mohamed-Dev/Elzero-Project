@@ -1037,6 +1037,7 @@ header .big-menu .col li a i{
     height: 30px;
     background-color: #eee;
     position: relative;
+    border-radius: 15px;
 }
 
 .skills .prog .skill .stats span{
@@ -1045,7 +1046,7 @@ header .big-menu .col li a i{
     top: 0;
     height: 100%;
     background-color: var(--main-color);
-    transition: width 0.5s linear;
+    border-radius: 15px;
 }
 
 /* End Skills*/
