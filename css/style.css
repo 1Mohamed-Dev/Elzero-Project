@@ -328,7 +328,7 @@ header .big-menu .col li a i{
     position: relative;
     animation-name: up-down;
     animation-duration: 5s;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
 }
 
@@ -897,3 +897,100 @@ header .big-menu .col li a i{
 }
 
 /* End Team */
+
+/*Start Services*/
+
+.services{
+    padding: 100px 0;
+    position: relative;
+    background-color: #ececec;
+}
+
+.services .con{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.services .box{
+    background-color: white;
+    box-shadow: 0px 2px 7px 1px #0000003b;;
+    position: relative;
+    transition: 0.4s;
+    counter-increment: services;
+}
+
+.services .box::before{
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    top: -3px;
+    background-color: var(--main-color);
+    position: absolute;
+    width: 0;
+    transition: 0.4s;
+}
+
+.services .box:hover{
+    transform: translateY(-10px);
+}
+
+.services .box:hover::before{
+    width: 100%;
+}
+
+.services .box i{
+    display: block;
+    color: #d5d5d5;
+    margin: 30px auto 20px;
+    text-align: center;
+}
+
+.services .box h3{
+    margin: 20px 0 40px;
+    color: var(--main-color);
+    text-align: center;
+    font-size: 25px;
+}
+
+.services .box .foot{
+    padding: 15px;
+    background-color: #f9f9f9;
+    text-align: right;
+    position: relative;
+}
+
+.services .box .foot a{
+    color: var(--main-color);
+}
+
+.services .box .foot::before{
+    content: counter(services);
+    position: absolute;
+    background-color: var(--main-color);
+    color: white;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 80px;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.services .box .foot::after{
+    content: "";
+    position: absolute;
+    background-color: #d5d5d5;
+    top: 0;
+    left: 80px;
+    width: 50px;
+    height: calc(100% + 0.4px);
+    transform: skewX(-30deg);
+}
+
+/* End Services */
