@@ -1038,6 +1038,7 @@ header .big-menu .col li a i{
     background-color: #eee;
     position: relative;
     border-radius: 15px;
+    overflow: hidden;
 }
 
 .skills .prog .skill .stats span{
@@ -1047,6 +1048,71 @@ header .big-menu .col li a i{
     height: 100%;
     background-color: var(--main-color);
     border-radius: 15px;
+    transition: 0.6s;
+}
+
+.skills:hover .prog .skill .stats .bb1{
+    animation-name: width80;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes width80 {
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 80%;
+    }
+}
+
+.skills:hover .prog .skill .stats .bb2{
+    animation-name: width75;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes width75 {
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 75%;
+    }
+}
+
+.skills:hover .prog .skill .stats .bb3{
+    animation-name: width90;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes width90 {
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 90%;
+    }
+}
+
+.skills:hover .prog .skill .stats .bb4{
+    animation-name: width55;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes width55 {
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 55%;
+    }
 }
 
 /* End Skills*/
