@@ -1453,3 +1453,82 @@ header .big-menu .col li a i{
 }
 
 /* End Plans */
+
+/*Start Videos*/
+
+.video{
+    padding: 100px 0;
+}
+
+.video .main{
+    display: flex;
+    justify-content: center;
+    background-color: #ececec;
+    border: 1px solid #ddd;
+}
+
+@media (max-width: 991px){
+.video .main {
+    flex-direction: column;
+}
+}
+
+.video .main .list{
+    background-color: white;
+    min-width: 300px;
+}
+
+.video .main .list .heading{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f4f4f4;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.video .main .list .heading i{
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.video .main .list .heading i:hover{
+    color: black;
+}
+
+.video .main .list ul li{
+    padding: 20px;
+    border-top: 1px solid #ececec;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.video .main .list ul li:hover{
+    color: var(--main-color);
+}
+
+.video .main .list ul li span{
+    display: block;
+    margin-top: 10px;
+    color: #777;
+}
+
+.video .main .vid{
+    background-color: #e2e2e2;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.video .main .vid img{
+    max-width: 100%;
+}
+
+.video .main .vid .bar{
+    padding: 20px;
+    background-color: white;
+    margin-top: 10px;
+}
+
+/* End Videos */
