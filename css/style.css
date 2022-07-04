@@ -1154,6 +1154,7 @@ header .big-menu .col li a i{
 .event{
     padding: 100px 0;
     position: relative;
+    overflow: hidden;
 }
 
 .event .con{
@@ -1285,6 +1286,14 @@ header .big-menu .col li a i{
     border-radius: 50px;
     display: flex;
     gap: 20px;
+}
+
+@media (max-width: 767px){
+    .event .subs form {
+        max-width: 100%;
+        padding: 20px;
+        flex-direction: column;
+    }
 }
 
 .event .subs form input[type="email"]{
